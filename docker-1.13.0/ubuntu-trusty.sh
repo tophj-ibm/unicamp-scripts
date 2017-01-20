@@ -9,7 +9,7 @@ DOCKER_BUILD_PKGS=ubuntu-trusty make deb
 echo " - - - - - - - - - - - - - - - - - - - - "
 echo ""
 echo " The final deb should be located in : "
-echo " docker/bundles/latest/build-deb/ubuntu-trusty/*.deb "
+echo " docker/bundles/1.13.0/build-deb/ubuntu-trusty/*.deb "
 echo ""
 echo " Feel free to copy this out to target destination"
 echo ""

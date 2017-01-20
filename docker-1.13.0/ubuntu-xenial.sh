@@ -9,7 +9,7 @@ DOCKER_BUILD_PKGS=ubuntu-xenial make deb
 echo " - - - - - - - - - - - - - - - - - - - - "
 echo ""
 echo " The final deb should be located in : "
-echo " docker/bundles/latest/build-deb/ubuntu-xenial/*.deb "
+echo " docker/bundles/1.13.0/build-deb/ubuntu-xenial/*.deb "
 echo ""
 echo " Feel free to copy this out to target destination"
 echo ""
