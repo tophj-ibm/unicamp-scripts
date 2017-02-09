@@ -1,7 +1,14 @@
 #!/bin/bash
 
+# To use this script to generate a new folder, 
+# just change the DOCKER_VERSION and run.
+#
+# Make sure github.com/tophj-ibm/docker.git has 
+# a branch of the version you change it to
+#
+
 DEFAULT_DISTRO_VERSIONS=(ubuntu-trusty ubuntu-xenial ubuntu-yakkety) 
-DOCKER_VERSION=1.13.0
+DOCKER_VERSION=1.13.1
 
 DIR_NAME="docker-$DOCKER_VERSION"
 if [ ! -d "$DIR_NAME" ]; then
