@@ -43,9 +43,9 @@ if [ ! -d "$DIR_NAME" ]; then
 	done
 	
 	# make a script for testing all supported distros as well
-	echo "making test-script"
+	echo "making build-script"
 
-	cat > "test-script.sh" <<-EOF
+	cat > "build-script.sh" <<-EOF
 		#!/bin/bash
 		apt-get update && apt-get install -y docker-engine
 
@@ -71,7 +71,7 @@ if [ ! -d "$DIR_NAME" ]; then
 
 	EOF
 	
-	chmod 755 "test-script.sh"
+	chmod 755 "build-script.sh"
 
 	echo ""
 	echo "Done."

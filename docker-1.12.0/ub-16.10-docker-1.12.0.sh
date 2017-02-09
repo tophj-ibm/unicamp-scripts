@@ -4,7 +4,7 @@ git clone https://github.com/tophj-ibm/docker.git
 cd docker
 git fetch --all
 git checkout unicamp-v1.12.0-with-make-debs
-DOCKER_BUILD_PKGS=ubuntu-xenial make deb
+DOCKER_BUILD_PKGS=ubuntu-yakkety make deb
 echo " - - - - - - - - - - - - - - - - - - - - "
 echo ""
 echo " The final deb should be located in : "
