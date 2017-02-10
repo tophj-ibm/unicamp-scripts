@@ -28,15 +28,16 @@ if [ ! -d "$DIR_NAME" ]; then
 			cd docker
 			git fetch --all
 			git checkout unicamp-v$DOCKER_VERSION
-			DOCKER_BUILD_PKGS=$DISTRO make deb
-			echo " - - - - - - - - - - - - - - - - - - - - "
-			echo ""
-			echo " The final deb should be located in : "
-			echo " docker/bundles/$DOCKER_VERSION/build-deb/$DISTRO/*.deb "
-			echo ""
-			echo " Feel free to copy this out to target destination"
-			echo ""
-			echo " - - - - - - - - - - - - - - - - - - - - "
+			if DOCKER_BUILD_PKGS=$DISTRO make deb; then
+				echo " - - - - - - - - - - - - - - - - - - - - "
+				echo ""
+				echo " The final deb should be located in : "
+				echo " docker/bundles/$DOCKER_VERSION/build-deb/$DISTRO/*.deb "
+				echo ""
+				echo " Feel free to copy this out to target destination"
+				echo ""
+				echo " - - - - - - - - - - - - - - - - - - - - "
+			fi
 		EOF
 		
 		chmod 755 "$DISTRO.sh"
@@ -53,21 +54,22 @@ if [ ! -d "$DIR_NAME" ]; then
 		cd docker
 		git fetch --all
 		git checkout unicamp-v$DOCKER_VERSION
-		DOCKER_BUILD_PKGS= make deb
-		echo " - - - - - - - - - - - - - - - - - - - - "
-		echo ""
-		echo " The final 14.04 deb should be located in : "
-		echo " docker/bundles/$DOCKER_VERSION/build-deb/ubuntu-trusty/*.deb "
-		echo ""
-		echo " The final 16.04 deb should be located in : "
-		echo " docker/bundles/$DOCKER_VERSION/build-deb/ubuntu-xenial/*.deb "
-		echo ""
-		echo " The final 16.10 deb should be located in : "
-		echo " docker/bundles/$DOCKER_VERSION/build-deb/ubuntu-yakkety/*.deb "
-		echo ""
-		echo " Feel free to copy this out to target destination"
-		echo ""
-		echo " - - - - - - - - - - - - - - - - - - - - "
+		if make deb ; then
+			echo " - - - - - - - - - - - - - - - - - - - - "
+			echo ""
+			echo " The final 14.04 deb should be located in : "
+			echo " docker/bundles/$DOCKER_VERSION/build-deb/ubuntu-trusty/*.deb "
+			echo ""
+			echo " The final 16.04 deb should be located in : "
+			echo " docker/bundles/$DOCKER_VERSION/build-deb/ubuntu-xenial/*.deb "
+			echo ""
+			echo " The final 16.10 deb should be located in : "
+			echo " docker/bundles/$DOCKER_VERSION/build-deb/ubuntu-yakkety/*.deb "
+			echo ""
+			echo " Feel free to copy this out to target destination"
+			echo ""
+			echo " - - - - - - - - - - - - - - - - - - - - "
+		fi
 
 	EOF
 	
