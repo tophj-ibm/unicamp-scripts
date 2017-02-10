@@ -4,7 +4,8 @@ distro or add a new docker version, change the corresponding
 variables in generate.sh and run it, which will create the dir.
 
 
-##Branch for Docker v1.13.0 on ppc64le is equivalent to release
+
+##Branch for Docker v1.13.x on ppc64le is equivalent to release
 
 
 ##Branch for Docker v1.12.x with cherry-picks for making debs
