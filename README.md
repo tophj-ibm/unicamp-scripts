@@ -3,12 +3,13 @@ This is a repo for building docker on ppc64le. To add in a new
 distro or add a new docker version, change the corresponding 
 variables in generate.sh and run it, which will create the dir.
 
+## Branches > Docker v17.03 on ppc64le are equivalent to upstream release
 
 
-##Branch for Docker v1.13.x on ppc64le is equivalent to release
+## Branch for Docker v1.13.x on ppc64le is equivalent to upstream release
 
 
-##Branch for Docker v1.12.x with cherry-picks for making debs
+## Branch for Docker v1.12.x with cherry-picks for making debs
 
 the following three patches are cherry-picked into the 
 corresponding release branch
