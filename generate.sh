@@ -8,7 +8,7 @@
 #
 
 DEFAULT_DISTRO_VERSIONS=(ubuntu-trusty ubuntu-xenial ubuntu-yakkety) 
-DOCKER_VERSION=1.13.1
+DOCKER_VERSION=17.05.0-ce
 
 DIR_NAME="docker-$DOCKER_VERSION"
 if [ ! -d "$DIR_NAME" ]; then
