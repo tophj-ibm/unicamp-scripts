@@ -24,15 +24,15 @@ if [ ! -d "$DIR_NAME" ]; then
 			#!/bin/bash
 			apt-get update && apt-get install -y docker-engine
 
-			git clone https://github.com/tophj-ibm/docker.git
-			cd docker
+			git clone https://github.com/tophj-ibm/moby.git
+			cd moby
 			git fetch --all
 			git checkout unicamp-v$DOCKER_VERSION
 			if DOCKER_BUILD_PKGS=$DISTRO make deb; then
 				echo " - - - - - - - - - - - - - - - - - - - - "
 				echo ""
 				echo " The final deb should be located in : "
-				echo " docker/bundles/$DOCKER_VERSION/build-deb/$DISTRO/*.deb "
+				echo " moby/bundles/$DOCKER_VERSION/build-deb/$DISTRO/*.deb "
 				echo ""
 				echo " Feel free to copy this out to target destination"
 				echo ""
@@ -50,21 +50,21 @@ if [ ! -d "$DIR_NAME" ]; then
 		#!/bin/bash
 		apt-get update && apt-get install -y docker-engine
 
-		git clone https://github.com/tophj-ibm/docker.git
-		cd docker
+		git clone https://github.com/tophj-ibm/moby.git
+		cd moby
 		git fetch --all
 		git checkout unicamp-v$DOCKER_VERSION
 		if make deb ; then
 			echo " - - - - - - - - - - - - - - - - - - - - "
 			echo ""
 			echo " The final 14.04 deb should be located in : "
-			echo " docker/bundles/$DOCKER_VERSION/build-deb/ubuntu-trusty/*.deb "
+			echo " moby/bundles/$DOCKER_VERSION/build-deb/ubuntu-trusty/*.deb "
 			echo ""
 			echo " The final 16.04 deb should be located in : "
-			echo " docker/bundles/$DOCKER_VERSION/build-deb/ubuntu-xenial/*.deb "
+			echo " moby/bundles/$DOCKER_VERSION/build-deb/ubuntu-xenial/*.deb "
 			echo ""
 			echo " The final 16.10 deb should be located in : "
-			echo " docker/bundles/$DOCKER_VERSION/build-deb/ubuntu-yakkety/*.deb "
+			echo " moby/bundles/$DOCKER_VERSION/build-deb/ubuntu-yakkety/*.deb "
 			echo ""
 			echo " Feel free to copy this out to target destination"
 			echo ""
